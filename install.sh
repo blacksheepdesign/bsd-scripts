@@ -8,10 +8,10 @@ cd $BINTEMP
 curl -sL https://github.com/blacksheepdesign/bsd-scripts/archive/master.tar.gz | tar xz
 
 # Copy the scripts to /usr/local
-rsync -a $BINTEMP/ /usr/local/bsd-scripts/
+sudo rsync -a $BINTEMP/ /usr/local/bsd-scripts/
 
 # Symlink the script
-rm /usr/local/bin/bsd
+rm -f /usr/local/bin/bsd
 ln -s /usr/local/bsd-scripts/bsd.sh /usr/local/bin/bsd
 echo
 echo 'Install complete!'
