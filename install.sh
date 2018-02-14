@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Clean up issue from old installer
+rm -rf /usr/local/bsd-scripts/bsd-scripts-master
+
 # Create temporary directory with install files.
 BINTEMP=`mktemp -d 2>/dev/null || mktemp -d -t 'bsd-install'`
 cd $BINTEMP
